@@ -1,0 +1,23 @@
+
+<div class="row">
+
+    <div class="cpl-12">
+
+        <ul>
+            <li *ngFor=" let Q of ques">
+                <button class="btn btn-sm btn-primary" *ngIf="!Q.showOptions" (click)="check(Q)"> open</button>
+                <button class="btn btn-sm btn-primary" *ngIf="Q.showOptions" (click)="check(Q)"> close</button>
+
+                {{Q.state}}
+                <ul *ngIf = "Q.showOptions" >
+                    <li>{{Q.op1}}</li>
+                    <li>{{Q.op2}}</li>
+                    <li>{{Q.op3}}</li>
+                    <li>{{Q.op4}}</li>
+                    <li>{{Q.correctAnswer}}</li>
+                    <li>{{Q.marks}}</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>

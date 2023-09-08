@@ -1,0 +1,18 @@
+
+<div class="row">
+    <div class="col-12 mb-3 mt-2">
+        <h2>Products</h2>
+    </div>
+
+    <div class="col-4" *ngFor="let P of products">
+        <div class="card mt-2 mb-2">
+            <div class="card-header">
+                {{ P.name }}
+            </div>
+
+            <div class="card-body">
+                {{ P.price }}
+            </div>
+        </div>
+    </div>
+</div>
